@@ -10,14 +10,7 @@ class PartyPlanner {
 		if (this.guestList.length === 0) {
 			return `Gotta add people to the guest list`;
 		}
-		let result = 'Welcome to the party '
-		this.guestList.forEach((guest, i) => {
-			if (i === 0) {
-				result += guest
-			} else {
-				result += ` and ${guest}`;
-			}
-		})
+		let result = `Welcome to the party ${this.guestList.join(' and ')}`
 		return result;
 	}
 }
